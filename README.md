@@ -8,7 +8,14 @@
  - IDE / Text Editor
  - Hello Word
  - Basic Syntax
- - First Time Code
+  - Vars
+  - Conditions
+  - Functions
+  - Modules
+  - Loops
+  - Docs
+  - Example Code
+ - MIX
 
 
 ### Install
@@ -33,7 +40,46 @@ Usually I use Atom / VIM to write code lines, in this case I prefer use [ATOM](h
 
 ### Basic Syntax
 
-#### Vars (ex1.elixir)
+#### Vars
+Vars are not typed, but for Immutable Data one time setting this var they didn't will change your type again.
 ```elixir
-  IO.puts "Hello Word"
+  #Declare a var
+
+  #string
+  name = "Guilherme"
+
+  #numbers
+  int = 1
+  float = 0.1
+
+  #atom
+  :name = "Atom Name"
+
+  #list
+  list = [1,2,3]
+
+  #tugle
+  tugle = {1,2,3}
+
+  #boolean
+  bool = true
+```
+
+#### Conditions
+Like "functions" will have a same structure **(somethig)** X **do** SOMETHING **end**
+```elixir
+  #Single If Condition
+  if rU == "mine" do
+    "AudioSlave"
+  end
+
+  #Else Condition
+  if album == "Meteora" do
+    "OOOOOOOOOOOOOOOOOH FUCKING AWESOME"
+  else
+    "NOT GOOD ENOUGH"
+  end
+
+  #Else If Condition
+  #Here will call this COND, it's something like ElseIf
 ```
