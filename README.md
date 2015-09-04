@@ -66,7 +66,8 @@ Vars are not typed, but for Immutable Data one time setting this var they didn't
 ```
 
 #### Conditions
-Like "functions" will have a same structure **(somethig)** X **do** SOMETHING **end**
+Like "functions" will have a same structure **(somethig)** X **do** SOMETHING **end** - **[Example Code](https://github.com/guidiego/elixir-study-repository/blob/master/example-source/ex5.ex)**
+
 ```elixir
   #Single If Condition
   if rU == "mine" do
@@ -82,4 +83,19 @@ Like "functions" will have a same structure **(somethig)** X **do** SOMETHING **
 
   #Else If Condition
   #Here will call this COND, it's something like ElseIf
+  cond do
+    points == 10 ->
+      "It's fine"
+    points == 5 ->
+      "Hmmm I think that something going wrong"
+    points == 0 ->
+      "Ok! Have an big error here!"
+  end
+
+  #case
+  #case it's basic a SwitchCase function, but give u more power in comparations
+  case {1,2,3} do
+    {1,x,3} when x != 2 -> "Wrong order friend!"
+    {1, 2 , 3} -> "You rocks!"
+  end
 ```
