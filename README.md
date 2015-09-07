@@ -99,3 +99,29 @@ Like "functions" will have a same structure **(somethig)** X **do** SOMETHING **
     {1, 2 , 3} -> "You rocks!"
   end
 ```
+
+#### Loops / Recursive
+In functional we didn't use Loop like:
+```javascript
+  for (var i = 0; i < x.length; i++){
+    //Do something
+  }
+```
+
+In functional we use Recursive functions, like:
+```elixir
+  defmodule Recursive do
+    def sum(tuple, total, i) when i == 0 do
+      total + elem(tuple,0)
+    end
+
+    def sum(tuple, total, i) do
+      sum(tuple, total + elem(tuple,i), i - 1)
+    end
+  end
+
+  test = {1,2,3}
+  IO.puts to_string(Recursive.sum(test, 0, 2))  
+```
+
+In resume : we have a overide method, the **when** factor help Elixir to saw what function he need to run, so when you have a index the function **sum** called another function **sum**. [Another Example](https://github.com/guidiego/elixir-study-repository/blob/master/example-source/ex7.ex)
