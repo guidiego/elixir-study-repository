@@ -125,3 +125,20 @@ In functional we use Recursive functions, like:
 ```
 
 In resume : we have a overide method, the **when** factor help Elixir to saw what function he need to run, so when you have a index the function **sum** called another function **sum**. [Another Example](https://github.com/guidiego/elixir-study-repository/blob/master/example-source/ex7.ex)
+
+#### Pipeline <3
+In elixir we have a pipeline, like pipelines found at UNIX OS, in resume u can use that to not put functions inside functions. The pipeline understand that the last return is the first param of the next! [**Example**](https://github.com/guidiego/elixir-study-repository/blob/master/example-source/ex12.ex)
+```elixir
+  defmodule Task do
+    def init() do {} end
+    def add(tuple, task) do insert_at(tuple, tuple_size(tuple), "Task #{tuple_size(tuple)} : #{task}") end
+    def reader(tuple, index) do IO.puts elem(tuple, index) end
+  end
+
+  tasks = Task.init()
+          |> Task.add("Watch Deadpoll")
+          |> Task.add("Listen Arctic Monkeys")
+          |> Task.add("Do the homework")
+          
+  Task.reader(tasks, 0)
+```
