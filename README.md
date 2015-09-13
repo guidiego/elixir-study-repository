@@ -65,6 +65,24 @@ Vars are not typed, but for Immutable Data one time setting this var they didn't
   bool = true
 ```
 
+#### Tugle
+```elixir
+
+  #Get tugle size
+  tugle_size(tugle)
+  
+  #Get tugle elem
+  elem(yourtugle, index)
+  
+  #Insert
+  insert_at(tugle, index, value)
+  
+  #Ex
+  tug = {1,2,3}
+  elem(tug, 0); #2
+ 
+  insert_at(tug, tugle_size(tug), 4); #{1,2,3,4}
+```
 #### Conditions
 Like "functions" will have a same structure **(somethig)** X **do** SOMETHING **end** - **[Example Code](https://github.com/guidiego/elixir-study-repository/blob/master/example-source/ex5.ex)**
 
